@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { ButtonEl } from './Button.styled';
 
-export const Button = ({ type = 'button', children, handleIncrementFunction }) => {
+export const Button = ({ type = 'button', children, handleClick }) => {
   return (
-    <ButtonEl onClick={() => handleIncrementFunction(children)} type={type}>
+    <ButtonEl onClick={() => handleClick(children)} type={type}>
       {children}
     </ButtonEl>
   );
@@ -12,5 +12,5 @@ export const Button = ({ type = 'button', children, handleIncrementFunction }) =
 Button.propTypes = {
   type: PropTypes.string,
   children: PropTypes.node,
-  handleIncrementFunction: PropTypes.func,
+  handleClick: PropTypes.func,
 };

@@ -10,7 +10,7 @@ export const FeedbackOptions = ({ feedbackData, handleIncrement }) => {
     <FeedbackOptionsContainer>
       {Object.keys(feedbackData).map(item => (
         <FeedbackOptionsItem key={item}>
-          <Button handleIncrementFunction={handleIncrement}>{item}</Button>
+          <Button handleClick={handleIncrement}>{item}</Button>
         </FeedbackOptionsItem>
       ))}
     </FeedbackOptionsContainer>
